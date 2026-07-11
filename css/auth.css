@@ -1,0 +1,121 @@
+.auth-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+}
+.auth-modal[data-open="true"] { visibility: visible; }
+
+.auth-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--color-overlay);
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.auth-modal[data-open="true"] .auth-overlay { opacity: 1; }
+
+.auth-card {
+  position: relative;
+  width: min(92vw, 420px);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 30px 28px 28px;
+  box-shadow: var(--shadow-pop);
+  opacity: 0;
+  transform: translateY(16px) scale(.98);
+  transition: opacity .25s ease, transform .25s ease;
+}
+.auth-modal[data-open="true"] .auth-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.auth-close {
+  position: absolute;
+  top: 16px; right: 18px;
+  font-size: 20px;
+  color: var(--color-ink-soft);
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 6px;
+  background: var(--color-bg);
+  border-radius: var(--radius-pill);
+  padding: 4px;
+  margin-bottom: 24px;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 9px 0;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-ink-soft);
+}
+.auth-tab[aria-selected="true"] {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-card);
+}
+
+.auth-card h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+.auth-card .auth-sub {
+  color: var(--color-ink-soft);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.auth-panel { display: none; flex-direction: column; gap: 14px; }
+.auth-panel.is-active { display: flex; }
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.field label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-ink-soft);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.field input {
+  padding: 11px 14px;
+  border: 1.5px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  background: var(--color-bg);
+}
+.field input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+.field-error {
+  font-size: 12px;
+  color: var(--color-primary-dark);
+  min-height: 14px;
+}
+
+.auth-submit { margin-top: 6px; width: 100%; }
+
+.auth-switch {
+  margin-top: 16px;
+  font-size: 13px;
+  text-align: center;
+  color: var(--color-ink-soft);
+}
+.auth-switch button {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: underline;
+}

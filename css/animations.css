@@ -1,0 +1,28 @@
+@keyframes fadeRight { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes fadeLeft  { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes fadeUp    { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeDown  { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes zoomIn    { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: scale(1); } }
+@keyframes flipUp {
+  from { opacity: 0; transform: rotateX(60deg) translateY(20px); transform-origin: bottom; }
+  to   { opacity: 1; transform: rotateX(0deg) translateY(0); }
+}
+
+[data-anim] { will-change: transform, opacity; }
+
+[data-anim].in-view {
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(.22,.9,.34,1);
+  animation-fill-mode: forwards;
+}
+
+[data-anim="fade-right"].in-view { animation-name: fadeRight; }
+[data-anim="fade-left"].in-view  { animation-name: fadeLeft; }
+[data-anim="fade-up"].in-view    { animation-name: fadeUp; }
+[data-anim="fade-down"].in-view  { animation-name: fadeDown; }
+[data-anim="zoom-in"].in-view    { animation-name: zoomIn; }
+[data-anim="flip-up"].in-view    {
+  animation-name: flipUp;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(.25,.8,.25,1);
+}
