@@ -2,283 +2,127 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="assets/chicken10.png">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
-
-  <!-- Styles, split by section -->
-  <link rel="stylesheet" href="css/variables.css" />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/hero.css" />
-  <link rel="stylesheet" href="css/steps.css" />
-  <link rel="stylesheet" href="css/menu.css" />
-  <link rel="stylesheet" href="css/cart.css" />
-  <link rel="stylesheet" href="css/auth.css" />
-  <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/toast.css" />
-  <link rel="stylesheet" href="css/animations.css" />
-
-  <title>Foodtolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Remix Icon (for ri-* icons) -->
+    <link rel="icon" type="image/png" href="assets/chicken10.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Foodtolio</title>
 </head>
 
 <body>
+    <section class="menu">
+        <div class="navlist">
+            <div class="logo">
+                <h1 data-anim="fade-down">Food<b>tolio</b></h1>
 
-  <!-- ===== Header ===== -->
-  <header class="site-header">
-    <div class="container nav">
-      <div class="brand">Food<b>tolio</b></div>
+                <ul data-anim="fade-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
 
-      <ul class="nav-links" data-anim="fade-down">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#steps">Service</a></li>
-        <li><a href="#about">About us</a></li>
-        <li><a href="#footer">Contact</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <div class="auth-buttons" data-anim="fade-down">
-          <button class="btn btn-ghost signin" data-auth-open="signin">Sign In</button>
-          <button class="btn btn-primary signup" data-auth-open="signup">Sign Up</button>
+                <div class="auth-buttons" data-anim="fade-down">
+                    <input class="signin" type="submit" value="Sign In" name="signin" />
+                    <input class="signup" type="submit" value="Sign Up" name="signup" />
+                </div>
+            </div>
         </div>
+    </section>
 
-        <button class="cart-btn" data-cart-open aria-label="Open cart">
-          <i class="ri-shopping-basket-2-line"></i>
-          <span class="cart-count" data-cart-count data-empty="true">0</span>
-        </button>
+    <section class="grid">
+        <div class="content">
+            <div class="content-left">
+                <div class="info">
+                    <h2 data-anim="fade-left">Order Your Best <br />Food anytime</h2>
+                    <p data-anim="fade-left">
+                        Hey, our delicious food is waiting for you.
+                        <br />
+                        We are always near you with fresh items.
+                    </p>
+                </div>
+                <button class="cta" data-anim="zoom-in">Explore Food</button>
+            </div>
 
-        <button class="nav-toggle" data-mobile-open aria-label="Open menu">
-          <i class="ri-menu-3-line"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile drawer -->
-  <div class="mobile-menu" data-mobile-menu data-open="false">
-    <div class="mobile-menu-overlay" data-mobile-overlay></div>
-    <nav class="mobile-menu-panel">
-      <button class="mobile-menu-close" data-mobile-close aria-label="Close menu"><i class="ri-close-line"></i></button>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#steps">Service</a></li>
-        <li><a href="#about">About us</a></li>
-        <li><a href="#footer">Contact</a></li>
-      </ul>
-      <button class="btn btn-primary signup" data-auth-open="signup">Sign Up</button>
-    </nav>
-  </div>
-
-  <!-- ===== Hero ===== -->
-  <section class="hero" id="home">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <span class="eyebrow" data-anim="fade-left">Fresh · Fast · Near you</span>
-        <h2 data-anim="fade-left">Order Your Best <br />Food anytime</h2>
-        <p data-anim="fade-left">
-          Hey, our delicious food is waiting for you.
-          We're always near you with fresh items, made to order.
-        </p>
-        <button class="btn btn-primary cta" data-anim="zoom-in"
-          onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
-          Explore Food <i class="ri-arrow-right-line"></i>
-        </button>
-
-        <div class="hero-stats" data-anim="fade-left">
-          <div><strong>2.4k+</strong><span>Orders served</span></div>
-          <div><strong>18 min</strong><span>Avg. delivery</span></div>
-          <div><strong>4.8 <i class="ri-star-fill"></i></strong><span>Customer rating</span></div>
+            <div class="content-right">
+                <img src="/assets/chicken7.png" alt="Rotating chicken illustration" />
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="content-right hero-media">
-        <div class="hero-plate"></div>
-        <img src="assets/chicken7.png" alt="Rotating chicken illustration" />
-      </div>
-    </div>
-  </section>
+    <section class="category">
+        <div class="list-items">
+            <h3 data-anim="flip-up">Popular<b>Dishes</b></h3>
 
-  <!-- ===== Order steps ===== -->
-  <section class="steps" id="steps">
-    <div class="container steps-strip">
-      <div class="step-ticket" data-anim="fade-up">
-        <span class="step-no">No. 01</span>
-        <h4>Browse the menu</h4>
-        <p>Filter by category and pick the dishes that sound good today.</p>
-      </div>
-      <div class="step-ticket" data-anim="fade-up">
-        <span class="step-no">No. 02</span>
-        <h4>Add to your tray</h4>
-        <p>Adjust quantities right on the card — your tray updates instantly.</p>
-      </div>
-      <div class="step-ticket" data-anim="fade-up">
-        <span class="step-no">No. 03</span>
-        <h4>Checkout &amp; relax</h4>
-        <p>Confirm your order in the tray and we'll get it moving to your door.</p>
-      </div>
-    </div>
-  </section>
+            <div class="card-list" data-anim="fade-down">
+                <div class="card">
+                    <img src="/assets/chicken5.png" alt="Beef Burger" class="card-img" />
+                    <div class="food-title">
+                        <h1>Beef Burger</h1>
+                    </div>
 
-  <!-- ===== Menu ===== -->
-  <section class="category" id="menu">
-    <div class="container">
-      <div class="category-head">
-        <h3 data-anim="flip-up">Popular <b>Dishes</b></h3>
-        <p data-anim="fade-up">Made fresh, served fast — pick a category to narrow things down.</p>
-      </div>
+                    <div class="desc-food">
+                        <p>
+                            Juicy, smoky, and packed with real beef flavor—your perfect bite every time!stacked with
+                            premium ingredients.
+                        </p>
+                    </div>
 
-      <div class="filter-pills" data-filter-pills></div>
+                    <div class="price">
+                        <span class="price-value">$10.99</span>
+                        <span class="add-btn"><i class="ri-add-circle-fill plus-icon" aria-hidden="true"></i></span>
+                    </div>
+                </div>
 
-      <div class="card-list" data-menu-grid></div>
-    </div>
-  </section>
+                <!-- duplicate card examples (copy/paste) -->
+                <div class="card"> <!-- second card placeholder -->
+                    <img src="/assets/chicken1.png" alt="Dish" class="card-img" />
+                    <div class="food-title">
+                        <h1>Tacoz</h1>
+                    </div>
+                    <div class="desc-food">
+                        <p>Big flavor in every bite! Soft or crunchy, our tacos are stuffed with bold, zesty goodness
+                            you’ll crave again.</p>
+                    </div>
+                    <div class="price"><span class="price-value">$15.99</span><span class="add-btn"><i
+                                class="ri-add-circle-fill plus-icon"></i></span></div>
+                </div>
 
-  <!-- ===== Cart drawer ===== -->
-  <div class="cart-drawer" data-cart-drawer data-open="false">
-    <div class="cart-overlay" data-cart-overlay></div>
-    <aside class="cart-panel" aria-label="Your order tray">
-      <div class="cart-head">
-        <h3>Your Tray</h3>
-        <button class="cart-close" data-cart-close aria-label="Close cart"><i class="ri-close-line"></i></button>
-      </div>
-      <div class="cart-items" data-cart-items></div>
-      <div class="cart-summary">
-        <div class="cart-row"><span>Subtotal</span><span data-cart-subtotal>$0.00</span></div>
-        <div class="cart-row"><span>Delivery</span><span data-cart-delivery>$0.00</span></div>
-        <div class="cart-row total"><span>Total</span><span data-cart-total>$0.00</span></div>
-        <button class="btn btn-primary cart-checkout" data-cart-checkout>Checkout</button>
-      </div>
-    </aside>
-  </div>
+                <div class="card"> <!-- second card placeholder -->
+                    <img src="/assets/chicken.png" alt="Dish" class="card-img" />
+                    <div class="food-title">
+                        <h1>Potato Fries</h1>
+                    </div>
+                    <div class="desc-food">
+                        <p>Golden, crispy, and dangerously addictive! Our fries are the perfect snack or side—freshly
+                            fried, always delicious.</p>
+                    </div>
+                    <div class="price"><span class="price-value">$6.50</span><span class="add-btn"><i
+                                class="ri-add-circle-fill plus-icon"></i></span></div>
+                </div>
 
-  <!-- ===== Auth modal ===== -->
-  <div class="auth-modal" data-auth-modal data-open="false">
-    <div class="auth-overlay" data-auth-overlay></div>
-    <div class="auth-card" role="dialog" aria-modal="true" aria-label="Sign in or sign up">
-      <button class="auth-close" data-auth-close aria-label="Close"><i class="ri-close-line"></i></button>
+                <div class="card"> <!-- second card placeholder -->
+                    <img src="/assets/chicken4.png" alt="Dish" class="card-img" />
+                    <div class="food-title">
+                        <h1>Pizza</h1>
+                    </div>
+                    <div class="desc-food">
+                        <p>Fresh from the oven! Crispy crust, melty cheese, and toppings loaded to perfection. One slice
+                            is never enough!</p>
+                    </div>
+                    <div class="price"><span class="price-value">$19.99</span><span class="add-btn"><i
+                                class="ri-add-circle-fill plus-icon"></i></span></div>
+                </div>
 
-      <div class="auth-tabs">
-        <button class="auth-tab" data-tab="signin" aria-selected="true">Sign In</button>
-        <button class="auth-tab" data-tab="signup" aria-selected="false">Sign Up</button>
-      </div>
-
-      <div class="auth-panel is-active" data-panel="signin">
-        <h3>Welcome back</h3>
-        <p class="auth-sub">Sign in to track orders and reorder favorites.</p>
-        <form novalidate>
-          <div class="field">
-            <label for="signin-email">Email</label>
-            <input id="signin-email" name="email" type="email" placeholder="you@example.com" />
-            <span class="field-error"></span>
-          </div>
-          <div class="field">
-            <label for="signin-password">Password</label>
-            <input id="signin-password" name="password" type="password" placeholder="••••••" />
-            <span class="field-error"></span>
-          </div>
-          <button class="btn btn-primary auth-submit" type="submit">Sign In</button>
-        </form>
-        <p class="auth-switch">New to Foodtolio? <button type="button" data-switch-to="signup">Create an
-            account</button></p>
-      </div>
-
-      <div class="auth-panel" data-panel="signup">
-        <h3>Create your account</h3>
-        <p class="auth-sub">Join to save addresses and get order updates.</p>
-        <form novalidate>
-          <div class="field">
-            <label for="signup-name">Full name</label>
-            <input id="signup-name" name="name" type="text" placeholder="Jamie Rivera" />
-            <span class="field-error"></span>
-          </div>
-          <div class="field">
-            <label for="signup-email">Email</label>
-            <input id="signup-email" name="email" type="email" placeholder="you@example.com" />
-            <span class="field-error"></span>
-          </div>
-          <div class="field">
-            <label for="signup-password">Password</label>
-            <input id="signup-password" name="password" type="password" placeholder="At least 6 characters" />
-            <span class="field-error"></span>
-          </div>
-          <button class="btn btn-primary auth-submit" type="submit">Sign Up</button>
-        </form>
-        <p class="auth-switch">Already have an account? <button type="button" data-switch-to="signin">Sign in</button>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== Footer ===== -->
-  <footer class="site-footer" id="footer">
-    <div class="container">
-      <div class="footer-newsletter">
-        <h3>Get new dishes and deals in your inbox.</h3>
-        <form class="newsletter-form" data-newsletter-form>
-          <input type="email" placeholder="Enter your email" aria-label="Email address" required />
-          <button class="btn btn-primary" type="submit">Subscribe</button>
-          <span class="newsletter-msg" data-newsletter-msg></span>
-        </form>
-      </div>
-
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="brand">Food<b>tolio</b></div>
-          <p>Fresh, fast, and made with care — your neighborhood kitchen, delivered.</p>
-          <div class="footer-socials">
-            <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
-            <a href="#" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
-            <a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a>
-          </div>
+            </div>
         </div>
+    </section>
 
-        <div class="footer-col">
-          <h5>Explore</h5>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#steps">Service</a></li>
-            <li><a href="#about">About us</a></li>
-          </ul>
-        </div>
+    <script src="/script.js"></script>
 
-        <div class="footer-col">
-          <h5>Company</h5>
-          <ul>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Partners</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h5>Support</h5>
-          <ul>
-            <li><a href="#">Help center</a></li>
-            <li><a href="#">Track order</a></li>
-            <li><a href="#">Contact us</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <span>© 2026 Foodtolio. All rights reserved.</span>
-        <span>Made for food lovers, everywhere.</span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts, split by feature -->
-  <script src="js/data.js"></script>
-  <script src="js/toast.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/render.js"></script>
-  <script src="js/cart.js"></script>
-  <script src="js/auth.js"></script>
-  <script src="js/nav.js"></script>
 </body>
 
 </html>

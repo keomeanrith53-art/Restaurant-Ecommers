@@ -1,0 +1,318 @@
+/* Reset + box-sizing */
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page base */
+body {
+  margin: 0 60px;
+  background-color: #ffeae0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+}
+
+/* Header / nav */
+.logo {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+/* Brand */
+.logo h1 {
+  font-size: 28px;
+}
+
+.logo b {
+  color: #ff511c;
+}
+
+/* Nav links */
+.logo ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  align-items: center;
+}
+
+.logo ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 17px;
+  position: relative;
+}
+
+/* Auth buttons */
+.auth-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+input {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.signin {
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.signup {
+  background-color: #ff511c;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Hero */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 80px;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-left .info h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.content-left .info p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.cta {
+  padding: 10px 22px;
+  background-color: #ff511c;
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Right image */
+.content-right img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  user-select: none;
+  display: block;
+  margin-left: auto;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Category section */
+.category {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.category .list-items {
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 60px;
+}
+
+/* heading */
+.category .list-items h3 {
+  font-size: 76px;
+  font-weight: 700;
+  margin-bottom: 150px;
+  margin-top: 100px;
+  text-align: center;
+  font: bold;
+}
+
+.category .list-items h3 b{
+  color: #ff511c;
+}
+
+/* Card grid */
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* Card image (circle) */
+.card-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin-top: -70px; /* lift image above card top for effect */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  background: #fff;
+  border: 6px solid #fff;
+}
+
+/* Title and description */
+.food-title h1 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.desc-food p {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+/* Price row */
+.price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-top: 6px;
+}
+
+.price-value {
+  font-weight: 700;
+}
+
+/* Icon button */
+.add-btn {
+  cursor: pointer;
+  font-size: 22px;
+  color: #ff511c;
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .card-list { grid-template-columns: repeat(2, 1fr); }
+  .content { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+  .logo { flex-wrap: wrap; gap: 10px; }
+}
+
+@media (max-width: 520px) {
+  body { margin: 0 16px; }
+  .card-list { grid-template-columns: 1fr; }
+  .content-left .info h2 { font-size: 28px; }
+}
+
+/* animation definitions */
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* in-view class triggers the animation — duration and easing are centralized here */
+[data-anim].in-view {
+  animation-duration: 2.7s;
+  animation-timing-function: cubic-bezier(.22,.9,.34,1);
+  animation-fill-mode: forwards; /* stay at final state */
+}
+
+/* map data-anim values -> keyframes */
+[data-anim="fade-right"].in-view { animation-name: fadeRight; }
+[data-anim="fade-left"].in-view  { animation-name: fadeLeft; }
+[data-anim="fade-up"].in-view    { animation-name: fadeUp; }
+[data-anim="fade-down"].in-view  { animation-name: fadeDown; }
+
+/* small demo styling */
+.box {
+  margin: 60px auto;
+  width: min(880px, 90%);
+  padding: 40px;
+  background: #f5f5f7;
+  border-radius: 12px;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Flip Up Animation */
+@keyframes flipUp {
+  from {
+    opacity: 0;
+    transform: rotateX(60deg) translateY(20px);
+    transform-origin: bottom;
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg) translateY(0);
+  }
+}
+
+[data-anim="flip-up"].in-view {
+  animation-name: flipUp;
+  animation-duration: 1s; /* slower + smoother */
+  animation-timing-function: cubic-bezier(.25, .8, .25, 1); /* smooth */
+  animation-fill-mode: forwards;
+}
+
+
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+[data-anim="zoom-in"].in-view {
+  animation-name: zoomIn;
+}
+
+[data-anim].in-view {
+  animation-duration: 1s; /* slower */
+  animation-timing-function: ease-out; 
+  animation-fill-mode: forwards;
+}
