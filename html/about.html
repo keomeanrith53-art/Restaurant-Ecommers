@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us — Foodtolio</title>
+    <link rel="icon" type="image/png" href="/assets/chicken10.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/about.css" />
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a href="/index.html" class="brand">Food<b>tolio</b></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="ri-menu-line"></i></button>
+            <nav class="site-nav" id="siteNav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/html/menu.html">Menu</a></li>
+                    <li><a href="/html/service.html">Service</a></li>
+                    <li><a href="/html/about.html" class="current">About us</a></li>
+                    <li><a href="/html/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="cart-btn" id="cartBtn" aria-label="Open cart"><i class="ri-shopping-bag-3-line"></i><span
+                        class="cart-count" id="cartCount">0</span></button>
+                <input class="signin" type="submit" value="Sign In" />
+                <input class="signup" type="submit" value="Sign Up" />
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="wrap about-hero-grid">
+                <div>
+                    <p class="eyebrow" data-anim="fade-down">Our story</p>
+                    <h1 class="section-title" data-anim="fade-left">Made by people<br>who <b>love food</b></h1>
+                    <p class="menu-intro" data-anim="fade-left" style="margin:0;">
+                        Foodtolio started as one small kitchen with a simple rule: cook it fresh,
+                        serve it fast, never cut corners. Years later, that rule hasn't changed —
+                        we've just gotten better at keeping it.
+                    </p>
+                </div>
+                <div class="about-hero-img" data-anim="zoom-in">
+                    <img src="/assets/chicken4.png" alt="Fresh pizza close up">
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-row">
+            <div class="wrap stats-grid" data-anim="fade-up">
+                <div class="stat-block"><span>2016</span><small>Founded</small></div>
+                <div class="stat-block"><span>12</span><small>Kitchens citywide</small></div>
+                <div class="stat-block"><span>500+</span><small>Dishes served daily</small></div>
+                <div class="stat-block"><span>4.9★</span><small>Average rating</small></div>
+            </div>
+        </section>
+
+        <hr class="divider wrap">
+
+        <section class="values">
+            <div class="wrap">
+                <p class="eyebrow" data-anim="fade-up">What we stand for</p>
+                <h2 class="section-title" data-anim="fade-up">Our <b>values</b></h2>
+
+                <div class="values-grid">
+                    <div class="value-card" data-anim="fade-up">
+                        <i class="ri-seedling-line"></i>
+                        <h3>Local first</h3>
+                        <p>We buy from nearby markets and farms, so your plate supports the neighborhood too.</p>
+                    </div>
+                    <div class="value-card" data-anim="fade-up">
+                        <i class="ri-fire-line"></i>
+                        <h3>Made to order</h3>
+                        <p>Nothing is pre-made. Your order goes to the stove the second it's confirmed.</p>
+                    </div>
+                    <div class="value-card" data-anim="fade-up">
+                        <i class="ri-heart-line"></i>
+                        <h3>People over profit</h3>
+                        <p>Fair pay for our kitchens and riders comes before margins, every time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-banner">
+            <div class="wrap cta-banner-inner" data-anim="fade-up">
+                <div>
+                    <h2 class="section-title">Come taste <b>the difference</b></h2>
+                    <p>See what's cooking today and get it delivered fresh.</p>
+                </div>
+                <a href="/html/menu.html" class="btn btn-primary">View the menu <i class="ri-arrow-right-line"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-wrap">
+            <div class="footer-brand">
+                <h2>Food<b>tolio</b></h2>
+                <p>Fresh food, fast at your door — every single day.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h4>Explore</h4>
+                    <a href="/index.html">Home</a>
+                    <a href="/html/menu.html">Menu</a>
+                    <a href="/html/service.html">Service</a>
+                    <a href="/html/about.html">About us</a>
+                    <a href="/html/contact.html">Contact</a>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p>123 Flavor Street, Phnom Penh</p>
+                    <p>+855 12 345 678</p>
+                    <p>hello@foodtolio.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Foodtolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-head">
+            <h3>Your Order</h3>
+            <button id="cartClose" aria-label="Close cart"><i class="ri-close-line"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+        <button class="btn btn-primary cart-checkout">Checkout</button>
+    </aside>
+    <div class="toast" id="toast"></div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>

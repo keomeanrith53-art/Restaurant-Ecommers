@@ -1,0 +1,69 @@
+/* =========================================================
+   contact.css — contact form + info cards + map box
+   ========================================================= */
+
+.contact-hero { padding: 60px 0 20px; text-align: center; }
+.contact-hero .section-title { margin: 10px 0 14px; }
+.contact-hero .menu-intro { margin: 0 auto; }
+
+.contact-main { padding: 50px 0 100px; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-form {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 36px;
+  box-shadow: 0 10px 26px rgba(39,28,19,.07);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.form-row { display: flex; flex-direction: column; gap: 8px; }
+.form-row label { font-size: 13px; font-weight: 600; color: var(--ink-soft); }
+.form-row input, .form-row textarea {
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  background: var(--cream);
+  resize: vertical;
+}
+.form-row input:focus, .form-row textarea:focus {
+  outline: none;
+  border-color: var(--chili);
+}
+.contact-form .btn { align-self: flex-start; margin-top: 6px; }
+
+.contact-info { display: flex; flex-direction: column; gap: 16px; }
+.info-card {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  display: flex; align-items: flex-start; gap: 14px;
+  box-shadow: 0 8px 20px rgba(39,28,19,.06);
+}
+.info-card i { font-size: 22px; color: var(--chili); margin-top: 2px; }
+.info-card h4 { font-family: var(--font-display); font-size: 15px; margin-bottom: 4px; }
+.info-card p { color: var(--ink-soft); font-size: 13.5px; }
+
+.map-box {
+  background: var(--ink);
+  color: #C9BBA9;
+  border-radius: var(--radius);
+  min-height: 160px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  text-align: center;
+  padding: 20px;
+}
+.map-box i { font-size: 28px; color: var(--gold); }
+
+@media (max-width: 880px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}

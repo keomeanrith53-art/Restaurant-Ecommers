@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service — Foodtolio</title>
+    <link rel="icon" type="image/png" href="/assets/chicken10.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/service.css" />
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a href="index.html" class="brand">Food<b>tolio</b></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="ri-menu-line"></i></button>
+            <nav class="site-nav" id="siteNav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/html/menu.html">Menu</a></li>
+                    <li><a href="/html/service.html" class="current">Service</a></li>
+                    <li><a href="/html/about.html">About us</a></li>
+                    <li><a href="/html/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="cart-btn" id="cartBtn" aria-label="Open cart"><i class="ri-shopping-bag-3-line"></i><span
+                        class="cart-count" id="cartCount">0</span></button>
+                <input class="signin" type="submit" value="Sign In" />
+                <input class="signup" type="submit" value="Sign Up" />
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="service-hero">
+            <div class="wrap">
+                <p class="eyebrow" data-anim="fade-down">What we offer</p>
+                <h1 class="section-title" data-anim="fade-up">Our <b>Services</b></h1>
+                <p class="menu-intro" data-anim="fade-up">However you want your food — at your door, at your table, or
+                    at your event — we've got a way to serve it.</p>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="wrap service-grid">
+                <div class="service-card" data-anim="fade-up">
+                    <i class="ri-e-bike-2-line"></i>
+                    <h3>Fast Delivery</h3>
+                    <p>Hot food at your door in 25–35 minutes, tracked door-to-door from kitchen to doorstep.</p>
+                </div>
+                <div class="service-card" data-anim="fade-up">
+                    <i class="ri-store-2-line"></i>
+                    <h3>Dine-in &amp; Reservations</h3>
+                    <p>Book a table online and skip the wait — walk-ins are always welcome too.</p>
+                </div>
+                <div class="service-card" data-anim="fade-up">
+                    <i class="ri-cake-3-line"></i>
+                    <h3>Private Catering</h3>
+                    <p>Birthdays, weddings, office parties — custom menus sized for your guest list.</p>
+                </div>
+                <div class="service-card" data-anim="fade-up">
+                    <i class="ri-briefcase-4-line"></i>
+                    <h3>Corporate Orders</h3>
+                    <p>Bulk lunches and standing orders for teams, billed monthly for convenience.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider wrap">
+
+        <section class="how">
+            <div class="wrap">
+                <p class="eyebrow" data-anim="fade-up">How it works</p>
+                <h2 class="section-title" data-anim="fade-up">Three steps <b>to the table</b></h2>
+
+                <div class="steps">
+                    <div class="step" data-anim="fade-up">
+                        <span class="step-num">01</span>
+                        <h3>Choose your dish</h3>
+                        <p>Browse the menu and add whatever you're craving to your bag.</p>
+                    </div>
+                    <div class="step" data-anim="fade-up">
+                        <span class="step-num">02</span>
+                        <h3>Place your order</h3>
+                        <p>Checkout and pick delivery, pickup, or a reserved table.</p>
+                    </div>
+                    <div class="step" data-anim="fade-up">
+                        <span class="step-num">03</span>
+                        <h3>Enjoy it fresh</h3>
+                        <p>We fire your order the moment it's confirmed — no sitting around.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-banner">
+            <div class="wrap cta-banner-inner" data-anim="fade-up">
+                <div>
+                    <h2 class="section-title">Planning an <b>event?</b></h2>
+                    <p>Tell us the headcount and the occasion — we'll handle the menu.</p>
+                </div>
+                <a href="/html/contact.html" class="btn btn-primary">Get in touch <i
+                        class="ri-arrow-right-line"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-wrap">
+            <div class="footer-brand">
+                <h2>Food<b>tolio</b></h2>
+                <p>Fresh food, fast at your door — every single day.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h4>Explore</h4>
+                    <a href="/index.html">Home</a>
+                    <a href="/html/menu.html">Menu</a>
+                    <a href="/html/service.html">Service</a>
+                    <a href="/html/about.html">About us</a>
+                    <a href="/html/contact.html">Contact</a>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p>123 Flavor Street, Phnom Penh</p>
+                    <p>+855 12 345 678</p>
+                    <p>hello@foodtolio.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Foodtolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-head">
+            <h3>Your Order</h3>
+            <button id="cartClose" aria-label="Close cart"><i class="ri-close-line"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+        <button class="btn btn-primary cart-checkout">Checkout</button>
+    </aside>
+    <div class="toast" id="toast"></div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>

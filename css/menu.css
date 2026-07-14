@@ -1,0 +1,30 @@
+/* =========================================================
+   menu.css — menu hero, filters, category sections
+   ========================================================= */
+
+.menu-hero { padding: 60px 0 10px; text-align: center; }
+.menu-hero .section-title { margin: 10px 0 14px; }
+.menu-intro { color: var(--ink-soft); max-width: 480px; margin: 0 auto 30px; }
+
+.menu-filters { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.filter-btn {
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: var(--paper);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink-soft);
+  transition: all .15s ease;
+}
+.filter-btn:hover { border-color: var(--chili); color: var(--chili-dark); }
+.filter-btn.active { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+.menu-list { padding: 60px 0 40px; }
+
+.menu-cat-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  margin-bottom: 26px;
+}

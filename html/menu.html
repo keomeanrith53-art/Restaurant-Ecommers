@@ -4,23 +4,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foodtolio — Order Your Best Food Anytime</title>
+    <title>Menu — Foodtolio</title>
     <link rel="icon" type="image/png" href="/assets/chicken10.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/base.css" />
-    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
 </head>
 
 <body>
 
     <header class="site-header">
         <div class="nav-wrap">
-            <a href="index.html" class="brand">Food<b>tolio</b></a>
+            <a href="/index.html" class="brand">Food<b>tolio</b></a>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="ri-menu-line"></i></button>
             <nav class="site-nav" id="siteNav">
                 <ul>
-                    <li><a href="index.html" class="current">Home</a></li>
-                    <li><a href="/html/menu.html">Menu</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/html/menu.html" class="current">Menu</a></li>
                     <li><a href="/html/service.html">Service</a></li>
                     <li><a href="/html/about.html">About us</a></li>
                     <li><a href="/html/contact.html">Contact</a></li>
@@ -36,73 +36,26 @@
     </header>
 
     <main>
-        <!-- HERO -->
-        <section class="hero">
-            <div class="wrap hero-grid">
-                <div class="hero-left">
-                    <p class="eyebrow" data-anim="fade-down">Fresh · Fast · Foodtolio</p>
-                    <h1 class="hero-title" data-anim="fade-left">Order Your Best<br>Food <b>Anytime</b></h1>
-                    <p class="hero-copy" data-anim="fade-left">
-                        Hey, our delicious food is waiting for you. We're always
-                        near you with fresh items, cooked to order and delivered hot.
-                    </p>
-                    <div class="hero-actions" data-anim="zoom-in">
-                        <a href=/html/menu.html class="btn btn-primary">Explore Food <i
-                                class="ri-arrow-right-line"></i></a>
-                        <a href="/html/service.html" class="btn btn-outline">Our Services</a>
-                    </div>
-                    <div class="hero-stats" data-anim="fade-up">
-                        <div class="stat"><span>4.9★</span><small>Customer rating</small></div>
-                        <div class="stat"><span>25 min</span><small>Avg. delivery</small></div>
-                        <div class="stat"><span>500+</span><small>Dishes served daily</small></div>
-                    </div>
-                </div>
-                <div class="hero-right">
-                    <img src="/assets/chicken7.png" alt="Rotating chicken illustration" class="hero-img"
-                        data-anim="zoom-in" />
-                    <div class="hero-badge">
-                        <i class="ri-timer-flash-line"></i>
-                        <span>Hot &amp; fresh<br>within 25 min</span>
-                    </div>
+        <section class="menu-hero">
+            <div class="wrap">
+                <p class="eyebrow" data-anim="fade-down">The full spread</p>
+                <h1 class="section-title" data-anim="fade-up">Our <b>Menu</b></h1>
+                <p class="menu-intro" data-anim="fade-up">Everything's cooked fresh once you order — pick a category and
+                    add whatever looks good to your bag.</p>
+
+                <div class="menu-filters" data-anim="fade-up">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="mains">Mains</button>
+                    <button class="filter-btn" data-filter="sides">Sides &amp; Snacks</button>
                 </div>
             </div>
         </section>
 
-        <hr class="divider wrap">
-
-        <!-- WHY FOODTOLIO -->
-        <section class="why">
+        <section class="menu-list">
             <div class="wrap">
-                <p class="eyebrow" data-anim="fade-up">Why order with us</p>
-                <div class="why-grid">
-                    <div class="why-card" data-anim="fade-up">
-                        <i class="ri-restaurant-2-line"></i>
-                        <h3>Cooked fresh, to order</h3>
-                        <p>Nothing sits under a heat lamp — every plate is fired the moment you order.</p>
-                    </div>
-                    <div class="why-card" data-anim="fade-up">
-                        <i class="ri-e-bike-2-line"></i>
-                        <h3>Quick, careful delivery</h3>
-                        <p>Our riders know the shortest routes, so your food arrives hot, not soggy.</p>
-                    </div>
-                    <div class="why-card" data-anim="fade-up">
-                        <i class="ri-leaf-line"></i>
-                        <h3>Honest ingredients</h3>
-                        <p>Sourced daily from local markets — no fillers, no shortcuts.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- POPULAR PICKS -->
-        <section class="category">
-            <div class="wrap">
-                <div class="cat-head">
-                    <h2 class="section-title" data-anim="flip-up">Popular<b>Dishes</b></h2>
-                    <a href="/html/menu.html" class="btn btn-outline">View full menu</a>
-                </div>
-
-                <div class="card-list" data-anim="fade-up">
+                <h2 class="menu-cat-title" data-anim="fade-up">Mains</h2>
+                <div class="card-list" data-cat="mains" data-anim="fade-up">
                     <div class="card">
                         <img src="/assets/chicken5.png" alt="Beef Burger" class="card-img" />
                         <div class="food-title">
@@ -114,9 +67,7 @@
                         <div class="price">
                             <span class="price-value">$10.99</span>
                             <span class="add-btn" data-id="burger" data-name="Beef Burger" data-price="10.99"
-                                data-img="assets/chicken5.png">
-                                <i class="ri-add-circle-fill plus-icon"></i>
-                            </span>
+                                data-img="assets/chicken5.png"><i class="ri-add-circle-fill plus-icon"></i></span>
                         </div>
                     </div>
 
@@ -131,14 +82,12 @@
                         <div class="price">
                             <span class="price-value">$15.99</span>
                             <span class="add-btn" data-id="tacos" data-name="Zesty Tacos" data-price="15.99"
-                                data-img="assets/chicken1.png">
-                                <i class="ri-add-circle-fill plus-icon"></i>
-                            </span>
+                                data-img="assets/chicken1.png"><i class="ri-add-circle-fill plus-icon"></i></span>
                         </div>
                     </div>
 
                     <div class="card">
-                        <img src="/assets/chicken4.png" alt="Pizza" class="card-img" />
+                        <img src="/assets/chicken4.png" alt="Loaded Pizza" class="card-img" />
                         <div class="food-title">
                             <h3>Loaded Pizza</h3>
                         </div>
@@ -149,23 +98,61 @@
                         <div class="price">
                             <span class="price-value">$19.99</span>
                             <span class="add-btn" data-id="pizza" data-name="Loaded Pizza" data-price="19.99"
-                                data-img="assets/chicken4.png">
-                                <i class="ri-add-circle-fill plus-icon"></i>
-                            </span>
+                                data-img="assets/chicken4.png"><i class="ri-add-circle-fill plus-icon"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="/assets/chicken7.png" alt="Grilled Chicken Bowl" class="card-img" />
+                        <div class="food-title">
+                            <h3>Grilled Chicken Bowl</h3>
+                        </div>
+                        <div class="desc-food">
+                            <p>Char-grilled chicken over herbed rice with a bright, tangy house sauce.</p>
+                        </div>
+                        <div class="price">
+                            <span class="price-value">$12.50</span>
+                            <span class="add-btn" data-id="bowl" data-name="Grilled Chicken Bowl" data-price="12.50"
+                                data-img="assets/chicken7.png"><i class="ri-add-circle-fill plus-icon"></i></span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- CTA BANNER -->
-        <section class="cta-banner">
-            <div class="wrap cta-banner-inner" data-anim="fade-up">
-                <div>
-                    <h2 class="section-title">Hungry <b>already?</b></h2>
-                    <p>Browse the full menu and get something delicious on the way.</p>
+                <hr class="divider">
+
+                <h2 class="menu-cat-title" data-anim="fade-up">Sides &amp; Snacks</h2>
+                <div class="card-list" data-cat="sides" data-anim="fade-up">
+                    <div class="card">
+                        <img src="/assets/chicken.png" alt="Potato Fries" class="card-img" />
+                        <div class="food-title">
+                            <h3>Potato Fries</h3>
+                        </div>
+                        <div class="desc-food">
+                            <p>Golden, crispy, and dangerously addictive — freshly fried, always delicious.</p>
+                        </div>
+                        <div class="price">
+                            <span class="price-value">$6.50</span>
+                            <span class="add-btn" data-id="fries" data-name="Potato Fries" data-price="6.50"
+                                data-img="assets/chicken.png"><i class="ri-add-circle-fill plus-icon"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="/assets/chicken10.png" alt="Spicy Wings" class="card-img" />
+                        <div class="food-title">
+                            <h3>Spicy Wings</h3>
+                        </div>
+                        <div class="desc-food">
+                            <p>Hand-tossed in house hot sauce, finished with a smoky char.</p>
+                        </div>
+                        <div class="price">
+                            <span class="price-value">$9.25</span>
+                            <span class="add-btn" data-id="wings" data-name="Spicy Wings" data-price="9.25"
+                                data-img="assets/chicken10.png"><i class="ri-add-circle-fill plus-icon"></i></span>
+                        </div>
+                    </div>
                 </div>
-                <a href="/html/menu.html" class="btn btn-primary">See the menu <i class="ri-arrow-right-line"></i></a>
+
             </div>
         </section>
     </main>
@@ -198,7 +185,6 @@
         </div>
     </footer>
 
-    <!-- CART DRAWER (shared) -->
     <div class="cart-overlay" id="cartOverlay"></div>
     <aside class="cart-drawer" id="cartDrawer">
         <div class="cart-drawer-head">

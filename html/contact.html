@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Foodtolio</title>
+    <link rel="icon" type="image/png" href="/assets/chicken10.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a href="/index.html" class="brand">Food<b>tolio</b></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="ri-menu-line"></i></button>
+            <nav class="site-nav" id="siteNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/html/menu.html">Menu</a></li>
+                    <li><a href="/html/service.html">Service</a></li>
+                    <li><a href="/html/about.html">About us</a></li>
+                    <li><a href="/html/contact.html" class="current">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="cart-btn" id="cartBtn" aria-label="Open cart"><i class="ri-shopping-bag-3-line"></i><span
+                        class="cart-count" id="cartCount">0</span></button>
+                <input class="signin" type="submit" value="Sign In" />
+                <input class="signup" type="submit" value="Sign Up" />
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="wrap">
+                <p class="eyebrow" data-anim="fade-down">Say hello</p>
+                <h1 class="section-title" data-anim="fade-up">Get in <b>touch</b></h1>
+                <p class="menu-intro" data-anim="fade-up">Questions, catering requests, or feedback — send us a note and
+                    we'll reply within a day.</p>
+            </div>
+        </section>
+
+        <section class="contact-main">
+            <div class="wrap contact-grid">
+
+                <form class="contact-form" id="contactForm" data-anim="fade-right">
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                    </div>
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us what's on your mind"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send message <i
+                            class="ri-send-plane-line"></i></button>
+                </form>
+
+                <div class="contact-info" data-anim="fade-left">
+                    <div class="info-card">
+                        <i class="ri-map-pin-2-line"></i>
+                        <div>
+                            <h4>Visit us</h4>
+                            <p>123 Flavor Street, Phnom Penh, Cambodia</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="ri-phone-line"></i>
+                        <div>
+                            <h4>Call us</h4>
+                            <p>+855 12 345 678</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="ri-mail-line"></i>
+                        <div>
+                            <h4>Email us</h4>
+                            <p>hello@foodtolio.com</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="ri-time-line"></i>
+                        <div>
+                            <h4>Kitchen hours</h4>
+                            <p>Every day · 10:00 AM – 10:30 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="map-box">
+                        <i class="ri-map-2-line"></i>
+                        <span>Map preview — add your embed here</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-wrap">
+            <div class="footer-brand">
+                <h2>Food<b>tolio</b></h2>
+                <p>Fresh food, fast at your door — every single day.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h4>Explore</h4>
+                    <a href="/index.html">Home</a>
+                    <a href="/html/menu.html">Menu</a>
+                    <a href="/html/service.html">Service</a>
+                    <a href="/html/about.html">About us</a>
+                    <a href="/html/contact.html">Contact</a>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p>123 Flavor Street, Phnom Penh</p>
+                    <p>+855 12 345 678</p>
+                    <p>hello@foodtolio.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Foodtolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-head">
+            <h3>Your Order</h3>
+            <button id="cartClose" aria-label="Close cart"><i class="ri-close-line"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+        <button class="btn btn-primary cart-checkout">Checkout</button>
+    </aside>
+    <div class="toast" id="toast"></div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
